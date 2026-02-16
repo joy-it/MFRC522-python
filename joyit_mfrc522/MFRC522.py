@@ -125,7 +125,7 @@ class MFRC522:
 
     serNum = []
 
-    def __init__(self, bus=0, device=0, spd=1000000, pin_mode=10, pin_rst=-1, debugLevel='WARNING'):
+    def __init__(self, bus=0, device=0, spd=1000000, pin_rst=-1,  cs_manual = False, cs_pin = 8, debugLevel='WARNING'):
         self.spi = spidev.SpiDev()
         self.spi.open(bus, device)
         self.spi.max_speed_hz = spd
@@ -137,7 +137,12 @@ class MFRC522:
             
         if pin_rst == -1:
             pin_rst = 15
-            
+        
+        if cs_manual is True:
+            self._CS = DigitalOutputDevice(cs_pin, initial_value=True)
+        else:
+            self._CS = None
+
         self._RST = DigitalOutputDevice(pin_rst, initial_value=True)
         self.MFRC522_Init()
 
@@ -145,10 +150,18 @@ class MFRC522:
         self.Write_MFRC522(self.CommandReg, self.PCD_RESETPHASE)
 
     def Write_MFRC522(self, addr, val):
+        if self._CS is not None:
+          self._CS.toggle()
         val = self.spi.xfer2([(addr << 1) & 0x7E, val])
+        if self._CS is not None:
+          self._CS.toggle()
 
     def Read_MFRC522(self, addr):
+        if self._CS is not None:
+          self._CS.toggle()
         val = self.spi.xfer2([((addr << 1) & 0x7E) | 0x80, 0])
+        if self._CS is not None:
+          self._CS.toggle()
         return val[1]
 
     def Close_MFRC522(self):
