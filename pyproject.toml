@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "joyit_mfrc522"
+version = "1.0.0"
+authors = [
+  { name="Pi My Life Up", email="support@pimylifeup.com" },
+  { name="Joy-IT", email="service@joy-it.net" }  
+]
+description = "A python library to read/write RFID tags via the MFRC522 RFID module."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license-files = ["LICENSE"]
+
+[project.urls]
+Homepage = "https://github.com/joy-it/MFRC522-python"
+Issues = "https://github.com/joy-it/MFRC522-python/issues"

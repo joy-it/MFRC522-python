@@ -26,10 +26,7 @@ python -m venv --system-site-packages env
 source env/bin/activate
 
 pip3 install spidev
-git clone https://github.com/joy-it/MFRC522-python
-cd MFRC522-python
-python3 setup.py install
-cd ..
+pip3 install joyit_mfrc522
 ```
 
 ## Example
