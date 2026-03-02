@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "JoyIT_RC522"
-version = "1.0.0"
+version = "1.0.1"
 authors = [
   { name="Pi My Life Up", email="support@pimylifeup.com" },
   { name="Joy-IT", email="service@joy-it.net" }  
@@ -21,3 +21,6 @@ license-files = ["LICENSE"]
 [project.urls]
 Homepage = "https://github.com/joy-it/MFRC522-python"
 Issues = "https://github.com/joy-it/MFRC522-python/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
