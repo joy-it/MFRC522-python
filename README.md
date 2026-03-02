@@ -33,6 +33,7 @@ pip3 install joyit_mfrc522
 In this library are two example codes. One is for reading from a tag and the other is for writing on a tag. You can execute them like the following.
 
 ```
+git clone https://github.com/joy-it/MFRC522-python
 python3 MFRC522-python/examples/write.py
 python3 MFRC522-python/examples/read.py
 ```
