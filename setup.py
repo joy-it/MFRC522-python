@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="joyit_mfrc522",
+    name="JoyIT_RC522",
     version="0.1.0",
     author="Pi My Life Up",
     author_email="support@pimylifeup.com",

@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "joyit_mfrc522"
+name = "JoyIT_RC522"
 version = "1.0.0"
 authors = [
   { name="Pi My Life Up", email="support@pimylifeup.com" },

@@ -1,4 +1,4 @@
-# joyit_mfrc522
+# JoyIT_RC522
 
 A python library to read/write RFID tags via the MFRC522 RFID module.
 
@@ -26,7 +26,7 @@ python -m venv --system-site-packages env
 source env/bin/activate
 
 pip3 install spidev
-pip3 install joyit_mfrc522
+pip3 install JoyIT_RC522
 ```
 
 ## Example
