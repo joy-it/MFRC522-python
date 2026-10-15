@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="JoyIT_RC522",
-    version="1.0.1",
+    version="1.0.2",
     author="Pi My Life Up",
     author_email="support@pimylifeup.com",
     description="A library to integrate the MFRC522 RFID readers with the Raspberry Pi",

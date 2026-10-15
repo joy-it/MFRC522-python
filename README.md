@@ -26,7 +26,7 @@ python -m venv --system-site-packages env
 source env/bin/activate
 
 pip3 install spidev
-pip3 install JoyIT_RC522
+pip install JoyIT-RC522
 ```
 
 ## Example
